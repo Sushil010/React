@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 *{
-    font-family: "Gilroy";
+    /* font-family: "Gilroy"; */
+    font-family: sans-serif;
 }
 
 ::selection{
