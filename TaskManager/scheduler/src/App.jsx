@@ -9,10 +9,11 @@ function App() {
 
     <Background/>
     <Foreground/>
-    <Card/>
+    
 
     </div>
   )
 }
+
 
 export default App

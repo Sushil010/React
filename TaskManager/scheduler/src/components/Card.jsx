@@ -21,8 +21,8 @@ function Card() {
 
         </div>
 
-        <div className='tag bg-green-600 w-full h-7'>
-          <h3 className='text-black justify-center items-center flex font-semibold text-sm '>Download Now</h3>
+        <div className='tag bg-green-600 w-full h-10'>
+          <h3 className='text-black justify-center items-center flex font-semibold text-sm py-2 '>Download Now</h3>
         </div>
                  
 
