@@ -3,6 +3,10 @@ import Card from './card'
 
 function Foreground() {
   
+  const ref=useRef(null);
+
+
+
   const data=[
     {
       desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
@@ -50,13 +54,13 @@ function Foreground() {
   
   
   return (
-    <div className='fixed top-0 left-0 z-[3] w-full h-full flex gap-[3rem] p-4 flex-wrap'>
+    <div ref={ref} className='fixed top-0 left-0 z-[3] w-full h-full flex gap-[3rem] p-4 flex-wrap'>
 
     
 
 
     {data.map((item,index)=>(
-        <Card dataed={item}/>
+        <Card dataed={item} reference={ref}/>
     ))}
 
         

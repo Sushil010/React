@@ -2,11 +2,11 @@ import React from 'react';
 import { FaFileAlt } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion"
 
-
-function Card({dataed}) {
+function Card({dataed,reference}) {
   return (
-    <div className='relative w-60 h-72 rounded-[40px] bg-zinc-700 p-5 text-white overflow-hidden'>
+    <motion.div drag dragConstraints={reference} className='relative w-60 h-72 rounded-[40px] bg-zinc-700 p-5 text-white overflow-hidden'>
       <FaFileAlt/>
     
       <p className='mt-5 text-xm'>{dataed.desc}</p>
@@ -39,7 +39,7 @@ function Card({dataed}) {
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 
