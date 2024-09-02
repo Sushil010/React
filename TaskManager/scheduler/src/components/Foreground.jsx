@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import Card from './card'
 
 function Foreground() {
@@ -45,13 +45,6 @@ function Foreground() {
     },
 ]
 
-
-
-  
-  
-  
-  
-  
   
   return (
     <div ref={ref} className='fixed top-0 left-0 z-[3] w-full h-full flex gap-[3rem] p-4 flex-wrap'>
