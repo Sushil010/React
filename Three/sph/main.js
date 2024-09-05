@@ -22,7 +22,9 @@ const sizes={
     const scene = new THREE.Scene();
 
     const geometry = new THREE.SphereGeometry(7,32,32);
-    const material=new THREE.MeshStandardMaterial({ color: '#00ff83' })
+    const material=new THREE.MeshStandardMaterial({ color: '#00ff83',
+        roughness:0.5
+     })
 
     //mesh is created by combining geometry and material it is made up of
     
@@ -50,7 +52,9 @@ const sizes={
     //Lights
     const light = new THREE.PointLight(0xffffff,100,100)
     light.position.set(0,10,10)
+
     //setting up x, y and z position of camera angle
+    // light.intensity=1.25
     scene.add(light)
 
 
