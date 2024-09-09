@@ -6,26 +6,13 @@ function Landing() {
   return (
     <div className='Landing w-full h-screen bg-zinc-900  pt-2'>
 
-    {/* <div className='outer px-10 mt-[25vh]'>
+    <div className='outer px-10 mt-[25vh]'>
       {["We create","eye-opening","presentations"].map((item,index)=>{
           return (
-          <div className='texter text-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium'>
-          <h1>{item}</h1>
-          </div>
-          )
-      })
-      }
-    </div>  */}
-
-
-
-<div className='outer px-10 mt-[25vh]'>
-      {["We create","eye-opening","presentations"].map((item,index)=>{
-          return (
-          <div className={`texter text-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium
-              ${index===1 ? 'ml-[80px]' :''}
-          `}>
-            {index === 1 && <div className='*:h-[20px] w-[40px] bg-red-500'></div>}
+          <div className='flex texter text-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium'>
+            {
+              index===1 && <div className='mt-[5px] h-[10vh] rounded-md w-[8vw] bg-[url("https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg")] bg-contain bg-no-repeat'></div>
+            }
           <h1>{item}</h1>
           </div>
           )
@@ -34,6 +21,21 @@ function Landing() {
     </div> 
 
 
+{/* <div className='outer px-10 mt-[25vh]'>
+      {["We create","eye-opening","presentations"].map((item,index)=>{
+          return (
+          <div className=''>
+            <div className={`texter flex justify-start aligntext-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium
+              ${index===1 ? 'ml-[80px]' :''}
+          `}>
+            {index === 1 && <div className='h-[79px] w-[7px] bg-red-500 '></div>}
+          <h1>{item}</h1>
+          </div>
+          </div>
+          )
+      })
+      }
+    </div>  */}
 
 
     <div className='border-t-2  border-zinc-700 mt-[17vh]'> 
