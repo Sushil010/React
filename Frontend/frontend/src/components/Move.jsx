@@ -1,6 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 
 function Move() {
+
+    const [rotate, setrotate] = useState(0)
+
+
+  useEffect(() => {
+   window.addEventListener("mousemove",(e)=>{
+        let x = e.clientX
+        let y = e.clientY
+
+        let win_x=window.innerWidth/2
+        let win_y=window.innerHeight/2
+
+
+        let delta_x= x-win_x
+        let delta_y=y-win_y
+
+        let angle=Math.atan2(delta_y,delta_x)*(180/Math.PI)
+
+        setrotate(angle-180)
+   })
+  })
+  
+
+
   return (
     <div className='w-full h-screen flex justify-center items-center '>
         
@@ -15,7 +39,8 @@ function Move() {
                     w-[8vw] h-[8vw] bg-black rounded-full'>
                         {/* <h1 className='text-white absolute  font-medium text-lg'>PLAY</h1> */}
 
-                        <div className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]  w-full h-[4vh] bg-red-500' >
+                        <div style={{transform:`translate(-50%,-50%) rotate(${rotate}deg)`}} 
+                        className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]  w-full h-[4vh]' >
 
                             <div className='w-[2vw] h-[2vw] rounded-full bg-white'>
 
@@ -36,7 +61,7 @@ function Move() {
                         {/* <h1 className='text-white absolute top-[50%] left-[50%] text-lg font-medium'>PLAY</h1> */}
 
                         
-                    <div className=' absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-[4vh]  bg-red-500' >
+                    <div style={{transform:`translate(-50%,-50%) rotate(${rotate}deg)`}} className=' absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-[4vh] ' >
 
                         <div className='w-[2vw] h-[2vw] rounded-full bg-white'>
 
