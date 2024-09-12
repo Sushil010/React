@@ -28,7 +28,7 @@ function Move() {
   return (
     <div className='w-full h-screen flex justify-center items-center '>
         
-        <div className=' relative w-full h-full bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")] bg-cover bg-center'>
+        <div  className=' relative w-full h-full bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")] bg-cover bg-center'>
 
             <div className='flex gap-20 absolute  top-1/2 left-1/2
             -translate-x-[50%] -translate-y-[50%]'>
