@@ -6,6 +6,7 @@ import About from './components/About'
 import Move from './components/Move'
 import Featured from './components/Featured'
 import Cards from './components/Cards'
+import Ready from './components/Ready'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
     <Move/>
     <Featured/>
     <Cards/>
+    <Ready/>
     </div>
 
     
