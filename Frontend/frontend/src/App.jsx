@@ -7,6 +7,7 @@ import Move from './components/Move'
 import Featured from './components/Featured'
 import Cards from './components/Cards'
 import Ready from './components/Ready'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
     <Featured/>
     <Cards/>
     <Ready/>
+    <Footer/>
+    
     </div>
 
     
