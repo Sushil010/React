@@ -10,7 +10,9 @@ function Landing() {
     <div className='outer px-10 mt-[25vh]'>
       {["We create","eye-opening","presentations"].map((item,index)=>{
           return (
-          <div className='flex texter text-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium'>
+          <div 
+            key={index}
+            className='flex texter text-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium'>
             {
               index===1 && <motion.div initial={{width:0}} animate={{width:"8vw"}} transition={{ease:[0.76, 0, 0.24, 1], duration: 1}} className='mt-[5px] h-[10vh] rounded-md w-[8vw] bg-[url("https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg")] bg-contain bg-no-repeat'></motion.div>
             }
