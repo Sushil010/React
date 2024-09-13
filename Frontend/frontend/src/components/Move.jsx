@@ -3,8 +3,6 @@ import React, { useEffect, useState} from 'react'
 function Move() {
 
     const [rotate, setrotate] = useState(0)
-
-
   useEffect(() => {
    window.addEventListener("mousemove",(e)=>{
         let x = e.clientX
@@ -22,9 +20,6 @@ function Move() {
         setrotate(angle-180)
    })
   })
-  
-
-
   return (
     <div className='w-full h-screen flex justify-center items-center '>
         

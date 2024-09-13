@@ -24,27 +24,10 @@ function Landing() {
     </div> 
 
 
-{/* <div className='outer px-10 mt-[25vh]'>
-      {["We create","eye-opening","presentations"].map((item,index)=>{
-          return (
-          <div className=''>
-            <div className={`texter flex justify-start aligntext-[100px] uppercase leading-[5.5vw] tracking-tighter font-medium
-              ${index===1 ? 'ml-[80px]' :''}
-          `}>
-            {index === 1 && <div className='h-[79px] w-[7px] bg-red-500 '></div>}
-          <h1>{item}</h1>
-          </div>
-          </div>
-          )
-      })
-      }
-    </div>  */}
-
-
     <div className='border-t-2  border-zinc-700 mt-[17vh]'> 
     </div>
 
-  <div className='px-10 py-5  mt-[5px] flex        justify-between align-center'>
+  <div className='px-10 py-5  mt-[5px] flex  justify-between align-center'>
     {['For public and private companies','From the first pitch to IPO'].map((items,index)=>(
       <p className={`text-base tracking-tight leading-none  `}>{items}</p>
     ))

@@ -161,8 +161,8 @@ function Featured() {
   <div className='right w-1/2 h-full  rounded-2xl  bg-[url("https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png")] bg-contain '>
 
   </div>
-
-  <h1 className='text-[#CDEA68] uppercase text-[3vw] absolute top-1/2 left-1/2 -translate-x-[50%] leading-none tracking-tighter -translate-y-[50%]'>premium blend</h1>
+{/* 
+  <h1 className='text-[#CDEA68] uppercase text-[3vw] absolute top-1/2 left-1/2 -translate-x-[50%] leading-none tracking-tighter -translate-y-[50%]'>premium blend</h1> */}
 
 
 
