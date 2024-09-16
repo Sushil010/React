@@ -60,8 +60,8 @@ scene.add(light)
 
 //OrbitControl
 const Orbit=new OrbitControls(camera,renderer.domElement)
-// Orbit.enableDamping=true;
-// Orbit.dampingFactor=0.03;
+Orbit.enableDamping=true;
+Orbit.dampingFactor=0.03;
 
 
 
@@ -71,7 +71,7 @@ function animate(t=0){
     requestAnimationFrame(animate)
     // mesh.rotation.y=t*0.0001
     renderer.render(scene,camera)
-    // Orbit.update()
+    Orbit.update()
 }
 
 animate()
