@@ -9,7 +9,7 @@ import {OrbitControls} from "jsm/controls/OrbitControls.js"
     const h=window.innerHeight
     renderer.setSize(w,h)
 
-    //creates a canvas --another way is to create canvas in html and query selector usage
+   
     document.body.appendChild(renderer.domElement)
 
 //Camera addition
@@ -18,7 +18,7 @@ import {OrbitControls} from "jsm/controls/OrbitControls.js"
     const near=0.1
     const far=100
     const camera=new THREE.PerspectiveCamera(fov,aspect,near,far)
-    camera.position.z=30
+    camera.position.z=40
 
 
 
@@ -32,58 +32,27 @@ import {OrbitControls} from "jsm/controls/OrbitControls.js"
 
 //Object addition:
 const loader=new THREE.TextureLoader()
-const imagemap=loader.load("images.png")
+const imagemap=loader.load("im.png")
 
 
-const geometry = new THREE.CylinderGeometry(10,10,20,32,32,true)
-const material=new THREE.MeshBasicMaterial(
+const geometry = new THREE.CylinderGeometry(12,12,20,32,32,true)
+const material=new THREE.MeshStandardMaterial(
     {map:imagemap,
      side:THREE.DoubleSide,
-     
+     emissive:true,
+    //  opacity:0,
+     transparent:true
     }
 )
 const mesh=new THREE.Mesh(geometry,material)
 scene.add(mesh)
 
 
-// const loader=new THREE.TextureLoader()
-// const earthmap=loader.load("color.jpg")
-// const nighttext=loader.load("earth_light.jpg")
-// const cloudey=loader.load("earthcloudmap.jpg")
-
-// const geometry=new THREE.IcosahedronGeometry(1,12)
-// const material=new THREE.MeshStandardMaterial({
-//     map: earthmap,
-//     emissiveMap:nighttext,
-//     emissive: new THREE.Color(0xffffff),
-//     emissiveIntensity: 1.0, 
-        
-// })
-
-// const mesh=new THREE.Mesh(geometry,material)
-
-// scene.add(mesh)
-
-
-
-// const clouds=new THREE.IcosahedronGeometry(1.01,12)
-// const laud_material=new THREE.MeshStandardMaterial({
-//     map: cloudey,
-//     transparent:true,
-//     opacity:0.5
-   
-        
-// })
-
-// const cloudmesh=new THREE.Mesh(clouds,laud_material)
-
-// scene.add(cloudmesh)
-
 
 
 
 //Light addition
-const light= new THREE.AmbientLight(0xffffff,2);
+const light= new THREE.AmbientLight(0xffffff,2.5);
 scene.add(light)
 
 
@@ -92,13 +61,15 @@ const Orbit=new OrbitControls(camera,renderer.domElement)
 Orbit.enableDamping=true;
 Orbit.dampingFactor=0.03;
 
+mesh.rotation.y=Math.PI/13
+// mesh.rotation.z=Math.PI/4
 
 
 
-//Continuous rendering always after adding everything:
+
 function animate(t=0){
     requestAnimationFrame(animate)
-    mesh.rotation.y+=0.001
+    mesh.rotation.y+=0.05
     renderer.render(scene,camera)
     Orbit.update()
 }
