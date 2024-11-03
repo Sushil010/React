@@ -50,7 +50,7 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false); // State for toggling mode
 
   const backgroundChanger = () => {
-    setIsDarkMode(prevMode => !prevMode); // Toggle the mode state
+    setIsDarkMode(pre => !pre); // Toggle the mode state
     if (!isDarkMode) {
       setBgColor('bg-black');
       setTextColor('text-white border-white');
