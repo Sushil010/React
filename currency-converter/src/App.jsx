@@ -5,7 +5,7 @@ const App = () => {
     <div className='text-white bg-slate-700 w-screen h-screen text-3xl' >
       
       
-      App
+      Currency Converter
       
       </div>
   )
