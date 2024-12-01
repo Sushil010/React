@@ -21,9 +21,9 @@ const Github = () => {
     <div>
         
         
-        Github Followers: {datas.followers}
+        Github Followers: {data.followers}
         
-        <img src="{data.avatar_url}" alt="Image" width={300}/>
+        <img src={data.avatar_url} alt="Image" width={300}/>
         
     </div>
   )
