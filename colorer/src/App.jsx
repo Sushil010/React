@@ -84,49 +84,96 @@ import React, { useState } from 'react'
 
 
 
+// const App=()=>{
+
+//     const [background, setbackground] = useState("#5f249f")
+
+//     const bgChanger=()=>{
+//         setbackground("Red")
+//     }
+
+//     const bbgChanger=()=>{
+//         setbackground("Blue")
+//     }
+
+
+// return(
+
+// <>
+// <div style={{background:background}}  className='w-screen h-screen text-2xl bg-purple-700'>
+//     <div className='flex justify-center items-center'>
+//         Color Switcher
+//     </div>
+   
+
+//     <div className='flex gap-4 justify-center items-center mt-2'>
+//         <button onClick={bgChanger} className='border border-black rounded-md p-2'>
+//             Red
+//         </button>
+
+//         <button onClick={bbgChanger} className='border border-black rounded-md p-2'>
+//             Blue
+//         </button>
+
+
+//     </div>
+// </div>
+
+// </>
+
+// )
+  
+
+
+// }
+
+
 const App=()=>{
 
-    const [background, setbackground] = useState("#5f249f")
-
-    const bgChanger=()=>{
-        setbackground("Red")
+    const [Tasks, setTasks] = useState([])
+    
+    const submitButton=()=>{
+        setTasks("Tasks")
     }
-
-    const bbgChanger=()=>{
-        setbackground("Blue")
-    }
-
+    
 
 return(
 
 <>
-<div style={{background:background}}  className='w-screen h-screen text-2xl bg-purple-700'>
-    <div className='flex justify-center items-center'>
-        Color Switcher
+
+    <div className='w-screen text-white h-screen bg-rose-900 '>
+
+        <div className='text-3xl flex justify-center items-center'>
+                TO-DO List
+        </div>
+
+        <div className='flex items-center justify-center mt-2'>
+            <div className=''>
+            <input className='text-black p-1' 
+            type="text" 
+            value={Tasks}
+            onChange={(e)=>{
+                setTasks(e.target.value)
+            }}
+            placeholder='Enter task' />
+
+            <button onClick={submitButton} className='ml-2 p-1 border bg-black border-black rounded-sm'>
+                Add
+            </button>
+            </div>
+        </div>
+
     </div>
-   
-
-    <div className='flex gap-4 justify-center items-center mt-2'>
-        <button onClick={bgChanger} className='border border-black rounded-md p-2'>
-            Red
-        </button>
-
-        <button onClick={bbgChanger} className='border border-black rounded-md p-2'>
-            Blue
-        </button>
 
 
-    </div>
-</div>
 
 </>
 
 )
-  
+
 
 
 }
-
 
 export default App
 
