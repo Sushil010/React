@@ -1,12 +1,20 @@
 import React from 'react'
+import UserContextProvider from './context/UserContextProvider'
+import Login from './components/Login'
+import Profile from './components/Profile'
 
 const App = () => {
   return (
-    <div className='w-screen h-screen bg-slate-600 text-3xl text-white'>
+    <UserContextProvider>
+    <div className='w-screen h-screen bg-slate-600 text-1xl text-black'>
       
-      App
-      
+    <Login/>
+    <Profile/>
       </div>
+
+    
+
+      </UserContextProvider>
   )
 }
 

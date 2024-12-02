@@ -1,0 +1,21 @@
+The useContext hook in React provides an easy way to share data between components without having to pass props manually at every level. It allows you to access the value of a context in any component,
+1. Create a Context: First, you create a context using the React.createContext() method. This provides a way to define a "global" value that can be shared across components.
+
+2. Provide the Context Value: You use the Provider component that comes with the context to specify the value of the context. The Provider wraps the components that need access to the context.
+
+3. Consume the Context Value: Any component can use the useContext hook to access the context's value without passing props.yougotthis
+
+
+
+
+Step1: Create a Usercontext js file through which a method will be innitiated named:const UserContext = React.createContext() 
+and export this by storing in a variable
+
+Step2: This method needs to be utilized again in some context so userContextProvider is created which is a method
+This userContextProvider actually serves as wrapper. i.e whatever comes within this, this method serves as outer wrapper and 
+fragments are used to include all those methods(we generally call them children) within this.  
+
+Instead of using only fragments the previously created file which was used to initialize React.createContext is used as fragment
+wrapper(which is obvious as that file is to be used in some scenario)
+UserContext is not sufficient as we also need to access some value so UserContext.Provider is alson used.
+
