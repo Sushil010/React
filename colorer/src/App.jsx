@@ -35,53 +35,105 @@ import React, { useState } from 'react'
 // export default App
 
 
-const App=()=>{
+// const App=()=>{
 
-  const [value, setvalue] = useState(0)
+//   const [value, setvalue] = useState(0)
 
-  const Increment=()=>{
+//   const Increment=()=>{
 
-    if(value<4)
-      setvalue(value+1)
+//     if(value<4)
+//       setvalue(value+1)
       
-    // else{alert("Cannot proceed")
-    // }
+//     // else{alert("Cannot proceed")
+//     // }
 
     
-  }
+//   }
 
-  const Decrement =()=>{
-    if(value>0)
-      setvalue(value-1)
-  }
+//   const Decrement =()=>{
+//     if(value>0)
+//       setvalue(value-1)
+//   }
+
+// return(
+//   <>
+//   <div className='flex flex-col justify-center items-center text-black text-2xl w-screen h-screen bg-blue-800'>
+
+//   {value>3 && <h1>Cannoot go beyond this</h1>}
+//   <h1>
+//     Counter-App-- Counter-Value: {value}
+//   </h1>
+
+
+//   {value<=0 && <h1>Lower Level Reached</h1>}
+//   <button onClick={Increment} className='mt-4 p-2 border border-black'>
+//     Increase Counter
+//   </button>
+
+//   <button onClick={Decrement} className='mt-3 border border-black p-2'>
+//     Decrease Counter
+//   </button>
+
+//   </div>
+  
+  
+//   </>
+
+// )
+// }
+
+
+
+const App=()=>{
+
+    const [background, setbackground] = useState("#5f249f")
+
+    const bgChanger=()=>{
+        setbackground("Red")
+    }
+
+    const bbgChanger=()=>{
+        setbackground("Blue")
+    }
+
 
 return(
-  <>
-  <div className='flex flex-col justify-center items-center text-black text-2xl w-screen h-screen bg-blue-800'>
 
-  {value>3 && <h1>Cannoot go beyond this</h1>}
-  <h1>
-    Counter-App-- Counter-Value: {value}
-  </h1>
+<>
+<div style={{background:background}}  className='w-screen h-screen text-2xl bg-purple-700'>
+    <div className='flex justify-center items-center'>
+        Color Switcher
+    </div>
+   
+
+    <div className='flex gap-4 justify-center items-center mt-2'>
+        <button onClick={bgChanger} className='border border-black rounded-md p-2'>
+            Red
+        </button>
+
+        <button onClick={bbgChanger} className='border border-black rounded-md p-2'>
+            Blue
+        </button>
 
 
-  {value<=0 && <h1>Lower Level Reached</h1>}
-  <button onClick={Increment} className='mt-4 p-2 border border-black'>
-    Increase Counter
-  </button>
+    </div>
+</div>
 
-  <button onClick={Decrement} className='mt-3 border border-black p-2'>
-    Decrease Counter
-  </button>
-
-  </div>
-  
-  
-  </>
+</>
 
 )
+  
+
+
 }
 
 
 export default App
+
+
+
+
+
+
+
 
