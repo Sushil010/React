@@ -6,7 +6,7 @@ import Profile from './components/Profile'
 const App = () => {
   return (
     <UserContextProvider>
-    <div className='w-screen h-screen bg-slate-600 text-1xl text-black'>
+    <div className='w-screen h-screen bg-purple-600 text-1xl text-black'>
       
     <Login/>
     <Profile/>
