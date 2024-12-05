@@ -5,10 +5,10 @@ const App = () => {
     
     <>
     
-    <div className='w-screen h-screen bg-zinc-700 text-white text-2xl'>
-      
-      App
-      
+      <div className='w-screen h-screen bg-zinc-700 text-white text-2xl'>
+          
+        App
+          
       </div>
 
       </>
