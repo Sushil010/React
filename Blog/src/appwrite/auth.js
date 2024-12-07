@@ -7,7 +7,7 @@ export class AuthService{
     account;
 
     constructor(){
-        
+
         this.client
         .setEndpoint(conf.appwriteURL) 
         .setProject(conf.appwriteProjectId)
@@ -15,7 +15,41 @@ export class AuthService{
         this.account=new Account(this.client)
     }
 
-    
+    async  CreateAccount({email,password,name}) {
+        try {
+           const userAccount = await this.account.create(ID.unique(),email,password,name)
+
+            if (userAccount) {
+                // call another method, here user will login instead of cinserting login detail again 
+                return this.Login({email,password})
+            
+            } 
+            
+            else {
+                return userAccount
+            }
+
+
+        } catch (error) {
+            throw error;
+            
+        }
+    }
+
+
+    async Login({email,password}){
+        try {
+            
+            return await this.account.createEmailPasswordSession(email,password)
+
+        } catch (error) {
+            throw error
+        }
+    }
+
+
+
+
 
 }
 
