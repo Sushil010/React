@@ -67,12 +67,12 @@ export class Service{
 
     }
 
-    async deletePost(slug,{title, content, featuredImage, status}){
+    async deletePost(slug){
         try {
-            return await this.databases.deletePost(
+            await this.databases.deletePost(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
+                slug
             )
             return true
         } catch (error) {
@@ -81,7 +81,18 @@ export class Service{
         }
     }
 
-    
+
+    async getPost(slug){
+        try {
+            return await this.databases.getPost(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug,
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPost :: error",error)
+        }
+    }
 
 
     
