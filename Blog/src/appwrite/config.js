@@ -26,7 +26,18 @@ export class Service{
 
         try {
             
-            return await this.databases.createDocument()
+            return await this.databases.createDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug,
+                {
+                    title,
+                    content,
+                    featuredImage,
+                    status,
+                    userId
+                }
+            )
 
 
         } catch (error) {
