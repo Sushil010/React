@@ -95,6 +95,79 @@ export class Service{
     }
 
 
+    async getPosts(queries=[Query.equal("status","active")]){
+
+        try {
+            
+            return await this.databases.getPosts(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                queries
+                // if parameter queries was not defined above;
+                //[
+                //Query.equal("status","active")
+                //]
+            )
+
+        } catch (error) {
+            console.log("Appwrite service :: getPosts :: error",error)
+            return false
+        }
+
+    }
+ 
+
+    //File upload
+    async uploadFile(file){
+        try {
+            return await this.bucket.createFile(
+                conf.appwriteBucketId,
+                ID.unique(),
+                file
+            )
+        } catch (error) {
+            console.log("Appwrite service :: uploadFile :: error",error)
+            return false
+        }
+    }
+
+
+    async deleteFile(fileID){
+        try {
+            await this.bucket.deleteFile(
+                conf.appwriteBucketId,
+                fileID
+            )
+            return true
+        } catch (error) {
+            console.log("Appwrite service :: deleteFile :: error",error)
+        }
+    }
+
+
+    //Uncomment to see response:
+    //this won't return a promise. So as mentioned in error or warning
+    // await won't have any effect on that getfilePreview method, so can use direct method
+
+    // async getFilePreview(fileID){
+    //     try {
+        
+    //         return await this.bucket.getFilePreview(
+    //             conf.appwriteBucketId,
+    //             fileID
+    //         )
+    //     } catch (error) {
+    //         console.log("Appwrite service :: getFilePreview :: error",error)
+    //     }
+    // }
+
+
+    getFilePreview(fileID){
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileID
+        )
+    }
     
 }
 
