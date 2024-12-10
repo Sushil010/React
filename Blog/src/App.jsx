@@ -37,6 +37,7 @@ const App = () => {
 
   <div className='w-screen h-screen bg-slate-700 text-white text-2xl'>
     <Header /> 
+    <main>
       <div class="flex-col gap-4 w-full flex items-center justify-center">
         <div
         class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full"
@@ -47,7 +48,7 @@ const App = () => {
         </div>
         </div>
       </div>
-
+      </main>
     <Footer/>
   </div>
  
