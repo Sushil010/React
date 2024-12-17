@@ -11,16 +11,17 @@ import React,{useId} from 'react'
  {
     const id=useId()
     
-    return 
-    (
+    return (
    <div className='w-full'> 
     
-    {label && <label 
+    {label && <label
+    className='inline-block mb-1 pl-1' 
     htmlFor={id}
-    className='inline-block mb-1 pl-1'
+    
     >
         {label}
-    </label>}
+    </label>
+    }
 
     <input 
     type={type}
