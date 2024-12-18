@@ -74,6 +74,12 @@ function Login() {
                     label="Email: "
                     placeholder="Enter your email"
                     type="email"
+                    
+                    //register is required as we are using Useform(taking it as basic syntax required for this portion)
+                    //need to spread register?
+                    //if we use register in any other place that value will get overwritten everytime something 
+                    //gets registered
+
                     {...register("email", {
                         required: true,
                         validate: {
@@ -82,6 +88,8 @@ function Login() {
                         }
                     })}
                     />
+
+
                     <Input
                     label="Password: "
                     type="password"
@@ -89,6 +97,9 @@ function Login() {
                     {...register("password", {
                         required: true,
                     })}
+
+
+                    
                     />
                     <Button
                     type="submit"
