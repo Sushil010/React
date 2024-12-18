@@ -13,6 +13,8 @@ const initialState = {
 //and automatically generates a slice reducer with 
 //corresponding action creators and action types.
 
+
+
 const authSlice = createSlice({
 
     name: 'auth',
