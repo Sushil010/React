@@ -35,14 +35,41 @@ function PostForm({post}) {
 
         if(post){
             //update the post
+
+            //check if the image is changed
+            //if changed delete the old image and upload the new image
+            //if no image is uploaded just update the post
+
             const file = data.image[0] ? service.uploadFile(data.image[0]) :""
 
-            //the post.image is the image of the post
-            //the image within post will be indicated later
+            //the post.featuredimage is the image of the post
+            //the featuredImage already exists in the appwrite database.
+
 
             if (file){
-                service.deleteFile(post.image)
+                service.deleteFile(post.featuredImage)
             }
+
+            //now update the post
+            const dbPost = service.updatePost(post.$id,{
+                ...data,
+                
+                //the featuredImage takes the value of the file if the file exists
+                featuredImage: file?file.$id:undefined,
+
+                
+
+            })
+            //if the post is successfully updated navigate to the post page
+            if(dbPost){
+                navigate(`/post/${post.slug}`)
+            }
+
+        }
+        
+        
+        //if the post does not exist create a new post
+        else{
 
         }
     } 
