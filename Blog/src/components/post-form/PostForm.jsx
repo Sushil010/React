@@ -23,7 +23,29 @@ function PostForm({post}) {
         }
     })
 
+    const navigate = useNavigate()
+    const userData= useSelector(state=>state.auth.userData)
 
+    //Function to handle form submission in case of new post or old posts
+
+    const submit = async(data)=>{
+        
+        //check if post exists if yes update the post
+        //if no create a new post
+
+        if(post){
+            //update the post
+            const file = data.image[0] ? service.uploadFile(data.image[0]) :""
+
+            //the post.image is the image of the post
+            //the image within post will be indicated later
+
+            if (file){
+                service.deleteFile(post.image)
+            }
+
+        }
+    } 
 
   return (
     <div>PostForm</div>
