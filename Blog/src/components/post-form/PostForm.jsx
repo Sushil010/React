@@ -76,17 +76,20 @@ function PostForm({post}) {
             if (file){
                 const fileId = file.$id
                 data.featuredImage=fileId
-                await service.createPost({
+                const dbPost =await service.createPost({
                     ...data,
                     userId:userData.$id
                 })
-            }
+                if(dbPost){
+                    navigate(`/post/${dbPost.$id}`)
+            } 
         }
     } 
 
   return (
     <div>PostForm</div>
   )
+}
 }
 
 export default PostForm
