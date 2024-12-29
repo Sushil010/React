@@ -68,10 +68,19 @@ function PostForm({post}) {
         }
         
         
-        
+
         //if the post does not exist create a new post
         else{
+            const file =  await service.uploadFile(data.image[0])
 
+            if (file){
+                const fileId = file.$id
+                data.featuredImage=fileId
+                await service.createPost({
+                    ...data,
+                    userId:userData.$id
+                })
+            }
         }
     } 
 
