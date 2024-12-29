@@ -68,6 +68,7 @@ function PostForm({post}) {
         }
         
         
+        
         //if the post does not exist create a new post
         else{
 
