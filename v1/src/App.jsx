@@ -1,11 +1,22 @@
 import React from 'react'
 
 const App = () => {
+  
+  const user="Name1"
+
+  const chanegeUsername=()=>{
+    user="Name2"
+  }
   return (
     <div>
       
-      <h1>App</h1>
-      
+    Hello, {user}
+    
+    <button onClick={chanegeUsername}>
+      Change Username
+    </button>
+
+
     </div>
   )
 }
