@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
-  
-  const user="Name1"
+   
 
-  const chanegeUsername=()=>{
-    user="Name2"
+  const [initial, setInitial] = useState(0)
+  
+  const counter=()=>{
+    
+    setInitial(initial+1)
   }
+
   return (
+
     <div>
       
-    Hello, {user}
-    
-    <button onClick={chanegeUsername}>
-      Change Username
-    </button>
-
-
+     <h4>Value of a is {initial}</h4>
+     <button onClick={counter}>
+      Increase value!!
+     </button>
+      
     </div>
+
+
   )
 }
 
