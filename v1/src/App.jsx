@@ -88,54 +88,118 @@
 
 
 
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   const [counter, setCounter] = useState(0)
+//   const [background, setBackground] = useState("green")
+//   const [icon, setIcon] = useState("green🟩")
+  
+//   const updateCounter=()=>{
+//     setCounter(prev=>prev+1)
+//   }
+  
+//   const changeIcon=()=>{
+//     setIcon(prev=>(prev==="green🟩"?"red🔴":"green🟩"))
+//   }
+
+//   const changeBackground=()=>{
+//     setBackground(prev=>(prev==="green"?"red":"green"))
+//   }
+
+
+//   const increaseHandler=()=>{
+//     updateCounter();
+//     changeBackground();
+//     changeIcon();
+//   }
+
+//   const decreaseCounter=()=>{
+//     setCounter(prev=>prev-1)
+//   }
+  
+//   const decreaseHandler=()=>{
+//     decreaseCounter();
+//     changeBackground();
+//     changeIcon();
+//   }
+  
+  
+//   return (
+//     <div style={{background:background,width:"full",height:"100vh"}}>
+      
+//       <button onClick={increaseHandler}>
+//         increase {counter} {icon}
+//       </button>
+
+//       <button onClick={decreaseHandler}>
+//         decrease {counter} {icon}
+//       </button>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
 import React, { useState } from 'react'
 
 const App = () => {
-  const [counter, setCounter] = useState(0)
-  const [background, setBackground] = useState("green")
-  const [icon, setIcon] = useState("green🟩")
   
-  const updateCounter=()=>{
-    setCounter(prev=>prev+1)
-  }
-  
-  const changeIcon=()=>{
-    setIcon(prev=>(prev==="green🟩"?"red🔴":"green🟩"))
-  }
+  const [light, setLight] = useState("black")
 
-  const changeBackground=()=>{
-    setBackground(prev=>(prev==="green"?"red":"green"))
-  }
+  // const [color, setColor] = useState("red🔴")
+  // const [yellow, setYellow] = useState("yellow")
+  // const [green, setGreen] = useState("green")
 
+  // const updateTraffic=()=>{
+  //   setColor(prev=>(prev==="red"?"yellow":"green"))
+  // }
 
-  const increaseHandler=()=>{
-    updateCounter();
-    changeBackground();
-    changeIcon();
-  }
-
-  const decreaseCounter=()=>{
-    setCounter(prev=>prev-1)
-  }
-  
-  const decreaseHandler=()=>{
-    decreaseCounter();
-    changeBackground();
-    changeIcon();
-  }
-  
-  
   return (
-    <div style={{background:background,width:"full",height:"100vh"}}>
+    <div style={{background:light,height:"100vh", display:"grid",justifyContent:"center",alignItems:"center"}}>
       
-      <button onClick={increaseHandler}>
-        increase {counter} {icon}
-      </button>
+      
+      <div
+      onClick={()=>{
+        // setLight(prev=>(prev==="red"?"yellow":"red"))
+        setLight("red")
+      }}
+      >
+        <button style={{background:"red", width:"50px",height:"50px",borderRadius:"50%"}}>
 
-      <button onClick={decreaseHandler}>
-        decrease {counter} {icon}
-      </button>
+        </button>
+      </div>
+
+
+      <div
+      onClick={()=>{
+        setLight("yellow")
+      }}
+      >
+        <button style={{background:"yellow", width:"50px",height:"50px",borderRadius:"50%"}}>
+
+        </button>
+      </div>
+
+
+      <div
+      onClick={()=>{
+        setLight("green")
+      }}
       
+      >
+        <button style={{background:"green", width:"50px",height:"50px",borderRadius:"50%"}}>
+
+        </button>
+      </div>
+
+      
+
+
     </div>
   )
 }
