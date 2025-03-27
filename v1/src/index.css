@@ -16,7 +16,7 @@ button{
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: #aaa;
+    background-color: #0c1557;
     padding: 10px;
     cursor: pointer;
 }
