@@ -1,45 +1,47 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const App = () => {
+// const App = () => {
    
 
-  const [initial, setInitial] = useState(0)
-  const [background, setbackground] = useState("green")
+//   const [initial, setInitial] = useState(0)
+//   const [background, setbackground] = useState("green")
   
 
-  const counter=()=>{
+//   const counter=()=>{
     
-    setInitial(initial+1)
-  }
+//     setInitial(prev=>prev+1)
+//   }
 
-  const decrement=()=>{
-    setInitial(initial-1)
-  }
+//   const decrement=()=>{
+//     setInitial(prev=>prev-1)
+//   }
 
-  return (
+//   return (
 
-    <div style={{background: "background"}}>
+//     <div style={{background: background}}>
       
-     <h4>Value of a is {initial}</h4>
-     <button onClick={counter}>
-      Increase value!!
-     </button>
-     <button onClick={decrement}>
-      Decrease value!!
-     </button>
-     <button onClick={
-      ()=>
-      setbackground("red")
-      }>
+//      <h4>Value of a is {initial}</h4>
+//      <button onClick={counter}>
+//       Increase value!!
+//      </button>
+//      <button onClick={decrement}>
+//       Decrease value!!
+//      </button>
+//      <button onClick={
+//       ()=>
+//       setbackground(prev=>(prev==="green"?"red":"green"))
+//       }>
         
-        change color!!
+//         change color!!
 
-     </button>
+//      </button>
       
-    </div>
+//     </div>
 
 
-  )
-}
+//   )
+// }
 
-export default App
+// export default App
+
+
