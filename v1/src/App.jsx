@@ -210,13 +210,23 @@
 import React from 'react'
 
 const App = () => {
+  
   return (
-    <div className='bg-amber-400 w-full h-[100vh]  font-sans'>
-      <div className='text-2xl'>
-        App
+    <div className=''>
+
+      <form onSubmit={()=>{
+        captureDetails(
+          console.log("Submitted field!!!")
+        )
+      }} 
       
-      </div>
-      </div>
+      className='p-4'>
+      <input className='p-2 text-black border-2 border-black rounded-2xl' type="text" placeholder='Enter name' /> 
+      <button className='m-2 cursor-pointer p-2 border-2 border-black rounded-2xl'>
+        Submit!!
+      </button>
+      </form>
+    </div>
   )
 }
 
