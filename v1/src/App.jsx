@@ -145,11 +145,11 @@
 
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const App = () => {
+// const App = () => {
   
-  const [light, setLight] = useState("black")
+//   const [light, setLight] = useState("black")
 
   // const [color, setColor] = useState("red🔴")
   // const [yellow, setYellow] = useState("yellow")
@@ -159,48 +159,64 @@ const App = () => {
   //   setColor(prev=>(prev==="red"?"yellow":"green"))
   // }
 
+//   return (
+//     <div style={{background:light,height:"100vh", display:"grid",justifyContent:"center",alignItems:"center"}}>
+      
+      
+//       <div
+//       onClick={()=>{
+//         // setLight(prev=>(prev==="red"?"yellow":"red"))
+//         setLight("red")
+//       }}
+//       >
+//         <button style={{background:"red", width:"50px",height:"50px",borderRadius:"50%"}}>
+
+//         </button>
+//       </div>
+
+
+//       <div
+//       onClick={()=>{
+//         setLight("yellow")
+//       }}
+//       >
+//         <button style={{background:"yellow", width:"50px",height:"50px",borderRadius:"50%"}}>
+
+//         </button>
+//       </div>
+
+
+//       <div
+//       onClick={()=>{
+//         setLight("green")
+//       }}
+      
+//       >
+//         <button style={{background:"green", width:"50px",height:"50px",borderRadius:"50%"}}>
+
+//         </button>
+//       </div>
+
+      
+
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+
+const App = () => {
   return (
-    <div style={{background:light,height:"100vh", display:"grid",justifyContent:"center",alignItems:"center"}}>
+    <div className='bg-amber-400 w-full h-[100vh]  font-sans'>
+      <div className='text-2xl'>
+        App
       
-      
-      <div
-      onClick={()=>{
-        // setLight(prev=>(prev==="red"?"yellow":"red"))
-        setLight("red")
-      }}
-      >
-        <button style={{background:"red", width:"50px",height:"50px",borderRadius:"50%"}}>
-
-        </button>
       </div>
-
-
-      <div
-      onClick={()=>{
-        setLight("yellow")
-      }}
-      >
-        <button style={{background:"yellow", width:"50px",height:"50px",borderRadius:"50%"}}>
-
-        </button>
       </div>
-
-
-      <div
-      onClick={()=>{
-        setLight("green")
-      }}
-      
-      >
-        <button style={{background:"green", width:"50px",height:"50px",borderRadius:"50%"}}>
-
-        </button>
-      </div>
-
-      
-
-
-    </div>
   )
 }
 
