@@ -209,16 +209,33 @@
 
 import React from 'react'
 
+
+
 const App = () => {
+  const handler=(e)=>{
+    e.preventDefault() 
+    console.log("submitted!!!")
+    // console.log("submitted!!")
+  }
   
   return (
     <div className=''>
 
-      <form onSubmit={()=>{
+      {/* <form onSubmit={(e)=>{
         captureDetails(
+          e.preventDefault(),
           console.log("Submitted field!!!")
         )
       }} 
+      
+      className='p-4'> */}
+      <form onSubmit={
+        (e)=>{
+          // e.preventDefault()
+          // handler()
+          handler(e)
+        }
+      } 
       
       className='p-4'>
       <input className='p-2 text-black border-2 border-black rounded-2xl' type="text" placeholder='Enter name' /> 
