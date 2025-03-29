@@ -253,7 +253,7 @@ import React, { useState } from 'react'
 
 const App = () => {
   
-  
+  const [username, setUsername] = useState('')
   
   return (
     <div className='bg-gray-600 h-full w-full'>
@@ -261,9 +261,11 @@ const App = () => {
       <form className='flex items-center justify-center m-2'>
 
         <input 
+        value={username}
         onChange={(e=>{
-          console.log(e.target.value)
+          setUsername(e.target.value)
         })}
+        
         type="text" 
         placeholder='Enter field'
         className='border border-black p-2' />
