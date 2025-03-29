@@ -207,43 +207,71 @@
 // export default App
 
 
-import React from 'react'
+// import React from 'react'
 
 
+
+// const App = () => {
+//   const handler=(e)=>{
+//     e.preventDefault() 
+//     console.log("submitted!!!")
+//     // console.log("submitted!!")
+//   }
+  
+//   return (
+//     <div className=''>
+
+//       {/* <form onSubmit={(e)=>{
+//         captureDetails(
+//           e.preventDefault(),
+//           console.log("Submitted field!!!")
+//         )
+//       }} 
+      
+//       className='p-4'> */}
+//       <form onSubmit={
+//         (e)=>{
+//           // e.preventDefault()
+//           // handler()
+//           handler(e)
+//         }
+//       } 
+      
+//       className='p-4'>
+//       <input className='p-2 text-black border-2 border-black rounded-2xl' type="text" placeholder='Enter name' /> 
+//       <button className='m-2 cursor-pointer p-2 border-2 border-black rounded-2xl'>
+//         Submit!!
+//       </button>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React, { useState } from 'react'
 
 const App = () => {
-  const handler=(e)=>{
-    e.preventDefault() 
-    console.log("submitted!!!")
-    // console.log("submitted!!")
-  }
   
   return (
-    <div className=''>
+    <div>
+      
+      <form className='flex items-center justify-center m-2'>
 
-      {/* <form onSubmit={(e)=>{
-        captureDetails(
-          e.preventDefault(),
-          console.log("Submitted field!!!")
-        )
-      }} 
-      
-      className='p-4'> */}
-      <form onSubmit={
-        (e)=>{
-          // e.preventDefault()
-          // handler()
-          handler(e)
-        }
-      } 
-      
-      className='p-4'>
-      <input className='p-2 text-black border-2 border-black rounded-2xl' type="text" placeholder='Enter name' /> 
-      <button className='m-2 cursor-pointer p-2 border-2 border-black rounded-2xl'>
-        Submit!!
-      </button>
+        <input type="text" placeholder='Enter field'
+         className='border border-black p-2' />
+        
+        <button className='m-2 p-2 cursor-pointer border border-amber-500 rounded-2xl'>
+          Submit!!!
+        </button>
+
       </form>
-    </div>
+
+    
+      
+      
+      
+      </div>
   )
 }
 
