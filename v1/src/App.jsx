@@ -253,13 +253,20 @@ import React, { useState } from 'react'
 
 const App = () => {
   
+  
+  
   return (
-    <div>
+    <div className='bg-gray-600 h-full w-full'>
       
       <form className='flex items-center justify-center m-2'>
 
-        <input type="text" placeholder='Enter field'
-         className='border border-black p-2' />
+        <input 
+        onChange={(e=>{
+          console.log(e.target.value)
+        })}
+        type="text" 
+        placeholder='Enter field'
+        className='border border-black p-2' />
         
         <button className='m-2 p-2 cursor-pointer border border-amber-500 rounded-2xl'>
           Submit!!!
