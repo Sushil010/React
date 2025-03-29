@@ -248,39 +248,13 @@
 // }
 
 // export default App
+import React from 'react'
 
-import React, { useState } from 'react'
+
 
 const App = () => {
-  
-  const [username, setUsername] = useState('')
-  
   return (
-    <div className='bg-gray-600 h-full w-full'>
-      
-      <form className='flex items-center justify-center m-2'>
-
-        <input 
-        value={username}
-        onChange={(e=>{
-          setUsername(e.target.value)
-        })}
-        
-        type="text" 
-        placeholder='Enter field'
-        className='border border-black p-2' />
-        
-        <button className='m-2 p-2 cursor-pointer border border-amber-500 rounded-2xl'>
-          Submit!!!
-        </button>
-
-      </form>
-
-    
-      
-      
-      
-      </div>
+    <div>App</div>
   )
 }
 
