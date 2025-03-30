@@ -309,9 +309,21 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-black w-full h-[100vh]'>
 
-      
+      <form className='p-2' action="">
+
+        <input
+        className='border border-yellow-600 p-2 text-white'
+        type="text"  
+        placeholder='Enter here'/>
+
+        <button className='border m-1 p-2 border-white cursor-pointer text-white'>
+          Submit!!
+        </button>
+
+
+      </form>
 
 
 
