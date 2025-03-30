@@ -305,8 +305,10 @@
 
 
 
-import React from 'react'
+import React, { useState } from 'react'
 
+
+const [fields, setFields] = useState("Hello world!!")
 const App = () => {
   return (
     <div className='bg-black w-full h-[100vh]'>
@@ -314,6 +316,7 @@ const App = () => {
       <form className='p-2' action="">
 
         <input
+        value={fields}
         className='border border-yellow-600 p-2 text-white'
         type="text"  
         placeholder='Enter here'/>
