@@ -248,51 +248,69 @@
 // }
 
 // export default App
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 
 
-const App = () => {
+// const App = () => {
 
-  const [username, setUsername] = useState('')
+//   const [username, setUsername] = useState('')
 
-  const submitter=(e)=>{
-    e.preventDefault()
-    console.log(username)
-    setUsername('')
-  }
+//   const submitter=(e)=>{
+//     e.preventDefault()
+//     console.log(username)
+//     setUsername('')
+//   }
 
-  return (
+//   return (
 
 
-    <div>
+//     <div>
       
       
-      <form 
-      className='flex m-2 gap-2' 
-      action=""
-      onSubmit={
-        submitter
-      }
+//       <form 
+//       className='flex m-2 gap-2' 
+//       action=""
+//       onSubmit={
+//         submitter
+//       }
       
-      >
+//       >
 
-      <input className=' p-2 border border-black' type="text"
-       placeholder='Enter Text'
-       value={username}
-      onChange={(e)=>{
-        setUsername(e.target.value)
-      }}
+//       <input className=' p-2 border border-black' type="text"
+//        placeholder='Enter Text'
+//        value={username}
+//       onChange={(e)=>{
+//         setUsername(e.target.value)
+//       }}
       
        
-       />
+//        />
       
-      <button className='bg-green-500 p-2 rounded-2xl border border-black cursor-pointer'>
-        Submit!!
-      </button>
+//       <button className='bg-green-500 p-2 rounded-2xl border border-black cursor-pointer'>
+//         Submit!!
+//       </button>
 
 
-      </form>
+//       </form>
+      
+
+
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>
+
       
 
 
