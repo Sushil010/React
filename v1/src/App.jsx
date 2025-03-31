@@ -308,8 +308,9 @@
 import React, { useState } from 'react'
 
 
-const [fields, setFields] = useState("Hello world!!")
+
 const App = () => {
+  const [fields, setFields] = useState("Hello world!!")
   return (
     <div className='bg-black w-full h-[100vh]'>
 
@@ -317,6 +318,9 @@ const App = () => {
 
         <input
         value={fields}
+        onChange={(e)=>{
+          setFields(e.target.value)
+        }}
         className='border border-yellow-600 p-2 text-white'
         type="text"  
         placeholder='Enter here'/>
