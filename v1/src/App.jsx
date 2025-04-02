@@ -370,6 +370,7 @@
 
 import React from 'react'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -377,8 +378,10 @@ const App = () => {
     <div className='bg-black h-[100vh] w-full text-white'>
    
     <Navbar/>
+    
 
     </div>
+    <Footer/>
     
     </>
   )
