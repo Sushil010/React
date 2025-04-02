@@ -305,45 +305,64 @@
 
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 
 
-const App = () => {
-  const [fields, setFields] = useState("Hello world!!")
+// const App = () => {
+//   const [fields, setFields] = useState("Hello world!!")
+//   const [mail, setMail] = useState("")
   
-  const applyChanger=()=>{
+//   const applyChanger=()=>{
     
-  }
+//   }
 
-  return (
-    <div className='bg-black w-full h-[100vh]'>
+//   return (
+//     <div className='bg-black w-full h-[100vh]'>
 
-      <form className='p-2' action="">
+//       <form className='p-2' action="">
     
-        <input
-        value={fields}
-        onChange={(e)=>{
-          // console.log(e)
-          // setFields("")
-          // setFields((prev) => prev + e.target.value.slice(prev.length));
-          // setFields(e.target.value)
-        }}
-        className='border border-yellow-600 p-2 text-white'
-        type="text"  
-        placeholder='Enter here'/>
+//         <input
+//         value={fields}
+//         onChange={(e)=>{
+//           setFields(e.target.value)
+//           // console.log(e)
+//           // setFields("")
+//           // setFields((prev) => prev + e.target.value.slice(prev.length));
+//           // setFields(e.target.value)
+//         }}
+//         className='border border-yellow-600 p-2 text-white'
+//         type="text"  
+//         placeholder='Enter here'/>
 
-        <button className='border m-1 p-2 border-white cursor-pointer text-white'>
-          Submit!!
-        </button>
-
-
-      </form>
+//         <button className='border m-1 p-2 border-white cursor-pointer text-white'>
+//           Submit!!
+//         </button>
 
 
+//       </form>
 
-    </div>
-  )
-}
+//       <form className='p-2' action="">
+    
+//       <input
+//     className='border border-yellow-600 p-2 text-white'
+//     value={mail}
+//     onChange={(e)=>{
+//       setMail(e.target.value)
+//     }}
+//     type="text"  
+//     placeholder='Enter mail'/>
 
-export default App
+//     <button className='border m-1 p-2 border-white cursor-pointer text-white'>
+//       Submit!!
+//     </button>
+
+
+//   </form>
+
+
+//     </div>
+//   )
+// }
+
+// export default App
