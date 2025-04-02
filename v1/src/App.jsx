@@ -311,15 +311,23 @@ import React, { useState } from 'react'
 
 const App = () => {
   const [fields, setFields] = useState("Hello world!!")
+  
+  const applyChanger=()=>{
+    
+  }
+
   return (
     <div className='bg-black w-full h-[100vh]'>
 
       <form className='p-2' action="">
-
+    
         <input
         value={fields}
         onChange={(e)=>{
-          setFields(e.target.value)
+          // console.log(e)
+          // setFields("")
+          // setFields((prev) => prev + e.target.value.slice(prev.length));
+          // setFields(e.target.value)
         }}
         className='border border-yellow-600 p-2 text-white'
         type="text"  
