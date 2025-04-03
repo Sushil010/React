@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Card = (user) => {
+const Card = ({user}) => {
+  console.log(user.username)
   return (
     <>
-    <div className='p-10 bg-green-400 h-[100vh] w-full'>
+    <div className='p-10 bg-green-400 h-full w-full'>
+      
         <div className='bg-black text-amber-50 p-10 border border-amber-400 text-center rounded-2xl inline-block
          '>
           <div className=' flex justify-center mb-3 '>

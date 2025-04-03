@@ -415,19 +415,20 @@ const App = () => {
   
   return (
     <>
-    <div className='flex justify-center items-center'>
+    <div className='grid grid-cols-3 justify-center items-center'>
    
     {/* data.map(function{
 
     }) */}
 
-    {data.map((user,index)=>{
+    {/* {data.map((user,index)=>(
         <Card key={index} user={user}/>
-    })}
+    ))} */}
 
      
-     
-     
+     {data.map((user,index)=>(
+      <Card user={user} key={index}/>
+     ))}
      
 
     </div>
