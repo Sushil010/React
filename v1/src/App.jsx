@@ -373,13 +373,60 @@ import Card from './components/Card'
 
 
 const App = () => {
+
+ var data= [
+    {
+      "username": "john_doe",
+      "surname": "Doe",
+      "profession": "Software Engineer",
+      "age": 28,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "username": "jane_smith",
+      "surname": "Smith",
+      "profession": "Graphic Designer",
+      "age": 25,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "username": "michael_johnson",
+      "surname": "Johnson",
+      "profession": "Data Analyst",
+      "age": 30,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "username": "emily_williams",
+      "surname": "Williams",
+      "profession": "Marketing Manager",
+      "age": 27,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "username": "david_brown",
+      "surname": "Brown",
+      "profession": "Frontend Developer",
+      "age": 26,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  
+  
   return (
     <>
     <div className='flex justify-center items-center'>
    
-     <Card/>
-     <Card/>
-     <Card/>
+    {/* data.map(function{
+
+    }) */}
+
+    {data.map((user,index)=>{
+        <Card key={index} user={user}/>
+    })}
+
+     
+     
      
      
 
