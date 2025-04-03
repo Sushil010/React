@@ -369,19 +369,20 @@
 
 
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Card from './components/Card'
+
 
 const App = () => {
   return (
     <>
-    <div className='bg-black h-[100vh] w-full text-white'>
+    <div className='flex justify-center items-center'>
    
-    <Navbar/>
-    
+     <Card/>
+     <Card/>
+     
 
     </div>
-    <Footer/>
+   
     
     </>
   )
