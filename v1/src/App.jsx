@@ -368,73 +368,100 @@
 // export default App
 
 
-import React from 'react'
-import Card from './components/Card'
+// import React from 'react'
+// import Card from './components/Card'
 
+
+// const App = () => {
+
+//  var data= [
+//     {
+//       "username": "john_doe",
+//       "surname": "Doe",
+//       "profession": "Software Engineer",
+//       "age": 28,
+//       "image": "https://via.placeholder.com/150"
+//     },
+//     {
+//       "username": "jane_smith",
+//       "surname": "Smith",
+//       "profession": "Graphic Designer",
+//       "age": 25,
+//       "image": "https://via.placeholder.com/150"
+//     },
+//     {
+//       "username": "michael_johnson",
+//       "surname": "Johnson",
+//       "profession": "Data Analyst",
+//       "age": 30,
+//       "image": "https://via.placeholder.com/150"
+//     },
+//     {
+//       "username": "emily_williams",
+//       "surname": "Williams",
+//       "profession": "Marketing Manager",
+//       "age": 27,
+//       "image": "https://via.placeholder.com/150"
+//     },
+//     {
+//       "username": "david_brown",
+//       "surname": "Brown",
+//       "profession": "Frontend Developer",
+//       "age": 26,
+//       "image": "https://via.placeholder.com/150"
+//     }
+//   ]
+  
+  
+//   return (
+//     <>
+//     <div className='grid grid-cols-3 justify-center items-center'>
+   
+//     {/* data.map(function{
+
+//     }) */}
+
+//     {/* {data.map((user,index)=>(
+//         <Card key={index} user={user}/>
+//     ))} */}
+
+     
+//      {data.map((user,index)=>(
+//       <Card user={user} key={index}/>
+//      ))}
+     
+
+//     </div>
+   
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import axios from 'axios'
 
 const App = () => {
 
- var data= [
-    {
-      "username": "john_doe",
-      "surname": "Doe",
-      "profession": "Software Engineer",
-      "age": 28,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "username": "jane_smith",
-      "surname": "Smith",
-      "profession": "Graphic Designer",
-      "age": 25,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "username": "michael_johnson",
-      "surname": "Johnson",
-      "profession": "Data Analyst",
-      "age": 30,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "username": "emily_williams",
-      "surname": "Williams",
-      "profession": "Marketing Manager",
-      "age": 27,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "username": "david_brown",
-      "surname": "Brown",
-      "profession": "Frontend Developer",
-      "age": 26,
-      "image": "https://via.placeholder.com/150"
-    }
-  ]
-  
+  const extractor=async ()=>{
+    var response= await axios.get('https://picsum.photos/v2/list')
+    console.log(response.data)
+  }
   
   return (
-    <>
-    <div className='grid grid-cols-3 justify-center items-center'>
-   
-    {/* data.map(function{
+    <div>
 
-    }) */}
-
-    {/* {data.map((user,index)=>(
-        <Card key={index} user={user}/>
-    ))} */}
-
-     
-     {data.map((user,index)=>(
-      <Card user={user} key={index}/>
-     ))}
-     
+      <div className='bg-[#367] w-full h-[100vh] text-black p-5'>
+        <button onClick={extractor}
+         className='bg-amber-400 active:scale-90 p-2 '>
+          Get data
+        </button>
+      </div>
 
     </div>
-   
-    
-    </>
   )
 }
 
