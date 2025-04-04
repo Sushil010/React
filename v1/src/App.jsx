@@ -441,14 +441,16 @@
 // export default App
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 const App = () => {
+  const [data, setData] = useState([])
 
   const extractor=async ()=>{
     var response= await axios.get('https://picsum.photos/v2/list')
-    console.log(response.data)
+    setData(response)
+    console.log(data)
   }
   
   return (
