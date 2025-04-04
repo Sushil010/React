@@ -449,8 +449,8 @@ const App = () => {
 
   const extractor=async ()=>{
     var response= await axios.get('https://picsum.photos/v2/list')
-    setData(response)
-    console.log(data)
+    setData(response.data)
+    // console.log(data)
   }
   
   return (
@@ -462,6 +462,12 @@ const App = () => {
           Get data
         </button>
       </div>
+      {data.map(function(item,index){
+        return <div key={index} className=''>
+          <h4>Hello</h4>
+
+        </div>
+      })}
 
     </div>
   )
