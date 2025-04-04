@@ -450,24 +450,28 @@ const App = () => {
   const extractor=async ()=>{
     var response= await axios.get('https://picsum.photos/v2/list')
     setData(response.data)
-    // console.log(data)
+    console.log(response.data)
   }
   
   return (
-    <div>
+    <div className='bg-[#367] w-full h-full text-black'>
 
-      <div className='bg-[#367] w-full h-[100vh] text-black p-5'>
+      <div className=' p-5'>
         <button onClick={extractor}
          className='bg-amber-400 active:scale-90 p-2 '>
           Get data
         </button>
-      </div>
-      {data.map(function(item,index){
+        {data.map(function(item,index){
         return <div key={index} className=''>
-          <h4>Hello</h4>
+          {/* <h4>Hello</h4> */}
+          <div className='bg-black flex h-[30px] w-[30px] gap-2'>
+
+          </div>
 
         </div>
       })}
+      </div>
+      
 
     </div>
   )
