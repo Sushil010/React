@@ -468,12 +468,13 @@ const App = () => {
           <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" />
           </div>
           
-          <h4>{item.author}</h4>
-          
-          <h4>{item.width} x {item.height}</h4>
-          <h4>{item.id}</h4>
-          <button className='border cursor-pointer p-1.5 border-blue-600 rounded-2xl'>Add Friend</button>
-          
+          <h3>{item.id}. {item.author}</h3>
+          <a href={item.url} target='_blank' rel="noopener noreferrer">
+          <button className='border mt-2 h-10 w-16 active:scale-90 bg-lime-600 border-amber-400 cursor-pointer p-1 rounded-2xl'>
+           Visit 
+          </button>  
+          </a>
+
 
           
 
