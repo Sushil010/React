@@ -448,7 +448,7 @@ const App = () => {
   const [data, setData] = useState([])
 
   const extractor=async ()=>{
-    var response= await axios.get('https://picsum.photos/v2/list')
+    var response= await axios.get('https://picsum.photos/v2/list?page=2&limit=30')
     setData(response.data)
     console.log(response.data)
   }
@@ -456,17 +456,28 @@ const App = () => {
   return (
     <div className='bg-[#367] w-full h-full text-black'>
 
-      <div className=' p-5'>
-        <button onClick={extractor}
+<button onClick={extractor}
          className='bg-amber-400 active:scale-90 p-2 '>
           Get data
         </button>
+      <div className='grid grid-cols-3  p-2 justify-center items-center'>
+       
         {data.map(function(item,index){
-        return <div key={index} className=''>
-          {/* <h4>Hello</h4> */}
-          <div className='bg-black flex h-[30px] w-[30px] gap-2'>
-
+        return <div key={index} className='bg-black ml-1 mb-3 text-amber-50 p-7 border border-amber-400 text-center rounded-2xl inline-block'>
+          <div className='flex justify-center mb-3 '>
+          <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" />
           </div>
+          
+          <h4>{item.author}</h4>
+          
+          <h4>{item.width} x {item.height}</h4>
+          <h4>{item.id}</h4>
+          <button className='border cursor-pointer p-1.5 border-blue-600 rounded-2xl'>Add Friend</button>
+          
+
+          
+
+          
 
         </div>
       })}
