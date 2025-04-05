@@ -446,11 +446,16 @@ import axios from 'axios'
 
 const App = () => {
   const [data, setData] = useState([])
+  const [counter, setCounter] = useState(6)
 
   const extractor=async ()=>{
-    var response= await axios.get('https://picsum.photos/v2/list?page=2&limit=30')
+    var response= await axios.get('https://picsum.photos/v2/list')
     setData(response.data)
     console.log(response.data)
+  }
+
+  const loader=()=>{
+    setCounter(prev=>prev+6)
   }
   
   return (
@@ -462,7 +467,7 @@ const App = () => {
         </button>
       <div className='grid grid-cols-3  p-2 justify-center items-center'>
        
-        {data.map(function(item,index){
+        {data.slice(0,counter).map(function(item,index){
         return <div key={index} className='bg-black ml-1 mb-3 text-amber-50 p-7 border border-amber-400 text-center rounded-2xl inline-block'>
           <div className='flex justify-center mb-3 '>
           <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" />
@@ -475,15 +480,22 @@ const App = () => {
           </button>  
           </a>
 
-
-          
-
-          
-
         </div>
       })}
       </div>
+
       
+
+      
+
+      
+      {counter<data.length &&(
+        <div className='flex justify-center'>
+        <button onClick={loader} className='bg-amber-50 flex mt-3 mb-3 cursor-pointer rounded-2xl p-2'>
+          Load More
+        </button>
+        </div>
+      )}
 
     </div>
   )
