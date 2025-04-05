@@ -456,9 +456,9 @@ const App = () => {
   return (
     <div className='bg-[#367] w-full h-full text-black'>
 
-<button onClick={extractor}
-         className='bg-amber-400 active:scale-90 p-2 '>
-          Get data
+        <button onClick={extractor}
+            className='bg-amber-400 ml-2 mt-2 active:scale-90 p-2 '>
+            Get data
         </button>
       <div className='grid grid-cols-3  p-2 justify-center items-center'>
        
