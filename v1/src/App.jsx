@@ -441,64 +441,61 @@
 // export default App
 
 
-import React, { useState } from 'react'
-import axios from 'axios'
+// import React, { useState } from 'react'
+// import axios from 'axios'
 
-const App = () => {
-  const [data, setData] = useState([])
-  const [counter, setCounter] = useState(6)
+// const App = () => {
+//   const [data, setData] = useState([])
+//   const [counter, setCounter] = useState(6)
 
-  const extractor=async ()=>{
-    var response= await axios.get('https://picsum.photos/v2/list')
-    setData(response.data)
-    console.log(response.data)
-  }
+//   const extractor=async ()=>{
+//     var response= await axios.get('https://picsum.photos/v2/list')
+//     setData(response.data)
+//     console.log(response.data)
+//   }
 
-  const loader=()=>{
-    setCounter(prev=>prev+6)
-  }
+//   const loader=()=>{
+//     setCounter(prev=>prev+6)
+//   }
   
-  return (
-    <div className='bg-[#367] w-full h-full text-black'>
+//   return (
+//     <div className='bg-[#367] w-full h-full text-black'>
 
-        <button onClick={extractor}
-            className='bg-amber-400 ml-2 mt-2 active:scale-90 p-2 '>
-            Get data
-        </button>
-      <div className='grid grid-cols-3  p-2 justify-center items-center'>
+//         <button onClick={extractor}
+//             className='bg-amber-400 ml-2 mt-2 active:scale-90 p-2 '>
+//             Get data
+//         </button>
+//       <div className='grid grid-cols-3  p-2 justify-center items-center'>
        
-        {data.slice(0,counter).map(function(item,index){
-        return <div key={index} className='bg-black ml-1 mb-3 text-amber-50 p-7 border border-amber-400 text-center rounded-2xl inline-block'>
-          <div className='flex justify-center mb-3 '>
-          <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" />
-          </div>
+//         {data.slice(0,counter).map(function(item,index){
+//         return <div key={index} className='bg-black ml-1 mb-3 text-amber-50 p-7 border border-amber-400 text-center rounded-2xl inline-block'>
+//           <div className='flex justify-center mb-3 '>
+//           <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" />
+//           </div>
           
-          <h3>{item.id}. {item.author}</h3>
-          <a href={item.url} target='_blank' rel="noopener noreferrer">
-          <button className='border mt-2 h-10 w-16 active:scale-90 bg-lime-600 border-amber-400 cursor-pointer p-1 rounded-2xl'>
-           Visit 
-          </button>  
-          </a>
+//           <h3>{item.id}. {item.author}</h3>
+//           <a href={item.url} target='_blank' rel="noopener noreferrer">
+//           <button className='border mt-2 h-10 w-16 active:scale-90 bg-lime-600 border-amber-400 cursor-pointer p-1 rounded-2xl'>
+//            Visit 
+//           </button>  
+//           </a>
 
-        </div>
-      })}
-      </div>
-
-      
+//         </div>
+//       })}
+//       </div>
 
       
-
       
-      {counter<data.length &&(
-        <div className='flex justify-center'>
-        <button onClick={loader} className='bg-amber-50 flex mt-3 mb-3 cursor-pointer rounded-2xl p-2'>
-          Load More
-        </button>
-        </div>
-      )}
+//       {counter<data.length &&(
+//         <div className='flex justify-center'>
+//         <button onClick={loader} className='bg-amber-50 flex mt-3 mb-3 cursor-pointer rounded-2xl p-2'>
+//           Load More
+//         </button>
+//         </div>
+//       )}
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
