@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import Button from './Button'
 
 const Home = () => {
-    const [value, setValue] = useState("")
+    const [task, setTask] = useState("")
+    // const [showdiv, setShowdiv] = useState(false)
+    const [submittedtask, setSubmittedTask] = useState([])
     
     const setChanger=(e)=>{
         e.preventDefault()
-        console.log(value)
-        setValue('')
+        console.log(task)
+        if(task.trim()==="") return
+        setSubmittedTask(prev=>[...prev,task])
+        setTask('')
+        // setShowdiv(true)
+        
+
+        
         
     }
     
@@ -21,9 +29,9 @@ const Home = () => {
             onSubmit={setChanger}
             >
                 <input 
-                value={value}
+                value={task}
                 onChange={(e)=>{
-                    setValue(e.target.value)
+                    setTask(e.target.value)
                 }}
                 
                 className='border border-white p-1' 
@@ -32,13 +40,32 @@ const Home = () => {
 
 
             </form>
+          
             
         </div>
-        <Button value={"Submit"}/>
-        {/* <Button value={"Delete"}/> */}
-        
-        
+        <Button value={"Submit"}/>  
     </div>
+    {/* {showdiv && (
+        <div className='ml-4 w-[30vw] h-[5vh] bg-yellow-500 text-black'>
+            <h3>{submittedtask}</h3>
+        </div>
+    )} */}
+    
+    {
+    
+    submittedtask.map(function(value,index){
+        return <div className='ml-4 flex w-[30vw] mb-2 h-[5vh] bg-yellow-500 text-black' key={index}>
+                    <h1>{index+1}.{value}</h1>
+                    <div className=''>
+                        <Button onClick={"deleter"} 
+                            value={"delete"}/>
+                    </div>
+                </div>
+
+
+    })
+    
+    }
     
     </>
     
