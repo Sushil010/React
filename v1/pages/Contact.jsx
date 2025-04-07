@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../src/context/UserContext'
 
 const Contact = () => {
+  const data = useContext(DataContext)
   return (
-    <div>Contact</div>
+    <div>Contact {data}</div>
   )
 }
 

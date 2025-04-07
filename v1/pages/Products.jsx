@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../src/context/UserContext'
 
 const Products = () => {
+  const datas = useContext(DataContext)
+  
   return (
-    <div>Products</div>
+    <div>Products {datas}</div>
   )
 }
 
