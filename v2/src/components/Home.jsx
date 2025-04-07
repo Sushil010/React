@@ -5,6 +5,8 @@ const Home = () => {
     const [task, setTask] = useState("")
     // const [showdiv, setShowdiv] = useState(false)
     const [submittedtask, setSubmittedTask] = useState([])
+
+    
     
     const setChanger=(e)=>{
         e.preventDefault()
@@ -12,11 +14,13 @@ const Home = () => {
         if(task.trim()==="") return
         setSubmittedTask(prev=>[...prev,task])
         setTask('')
-        // setShowdiv(true)
+        // setShowdiv(true)  
         
+    }
 
-        
-        
+    const recaller=(deleteindex)=>{
+        console.log("deleter")
+        setSubmittedTask(prev=>prev.filter((_,index)=>index!==deleteindex))
     }
     
   return (
@@ -57,8 +61,11 @@ const Home = () => {
         return <div className='ml-4 flex w-[30vw] mb-2 h-[5vh] bg-yellow-500 text-black' key={index}>
                     <h1>{index+1}.{value}</h1>
                     <div className=''>
-                        <Button onClick={"deleter"} 
-                            value={"delete"}/>
+                        <button
+                        onClick={()=>{recaller(index)}}
+                        className='border p-1 cursor-pointer active:scale-90 border-amber-700 bg-red-700'>
+                            Delete
+                        </button>
                     </div>
                 </div>
 
