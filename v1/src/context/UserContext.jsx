@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { createContext } from 'react'
+
+export const DataContext = createContext()
 
 const UserContext = ({children}) => {
-  return (
+    const username="John Doe"
+  
+    return (
     <div>
         
-        {children}
+        <DataContext.Provider value={username}>
+            {children}
+        </DataContext.Provider>
         
     </div>
   )

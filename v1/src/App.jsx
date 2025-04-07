@@ -538,14 +538,18 @@
 
 
 import React from 'react'
-
+import Contact from '../pages/Contact'
+import Products from '../pages/Products'
 const App = () => {
   return (
     <div className='bg-black text-white h-[100vh]'>
       
       App
       
-      </div>
+      <Contact/>
+      <Products/>
+      
+    </div>
   )
 }
 
