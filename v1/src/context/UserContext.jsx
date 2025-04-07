@@ -1,8 +1,12 @@
 import React from 'react'
 
-const UserContext = () => {
+const UserContext = ({children}) => {
   return (
-    <div>UserContext</div>
+    <div>
+        
+        {children}
+        
+    </div>
   )
 }
 
