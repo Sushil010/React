@@ -503,33 +503,49 @@
 
 
 
+// import React from 'react'
+// import { Route, Routes } from 'react-router-dom'
+// import Home from "../pages/Home";
+// import About from "../pages/About";
+// import Contact from "../pages/Contact";
+// import Products from "../pages/Products";
+// import Navbar from './components/Navbar';
+
+// const App = () => {
+//   return (
+//     <div className='bg-black text-white w-full h-[100vh]'>
+      
+//       <Navbar/>
+      
+//       <Routes>
+
+//         <Route path='/' element={<Home/>}/>
+//         <Route path='/about' element={<About/>}/>
+//         <Route path='/contact' element={<Contact/>}/>
+//         <Route path='/products' element={<Products/>}/>
+
+
+
+//       </Routes>
+      
+    
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Products from "../pages/Products";
-import Navbar from './components/Navbar';
 
 const App = () => {
   return (
-    <div className='bg-black text-white w-full h-[100vh]'>
+    <div className='bg-black text-white'>
       
-      <Navbar/>
+      App
       
-      <Routes>
-
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/products' element={<Products/>}/>
-
-
-
-      </Routes>
-      
-    
-    </div>
+      </div>
   )
 }
 
