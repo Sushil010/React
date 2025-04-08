@@ -558,11 +558,22 @@
 // export default App
 
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
   
   const [counter, setCounter] = useState(0)
+  
+  useEffect(() => {
+    if (counter>5){
+      <div className='bg-yellow-600 text-2xl text-black'>
+        Counter init
+      </div>
+    }
+    
+
+  }, [counter])
+  
 
 
   return (
@@ -577,8 +588,13 @@ const App = () => {
             Increase: {counter}
         </button>
       </div>
+
+         
+
+
     </div>
-    
+
+
   )
 }
 
