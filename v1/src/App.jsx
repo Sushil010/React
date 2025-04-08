@@ -537,21 +537,48 @@
 
 
 
-import React, { useContext } from 'react'
-import Contact from '../pages/Contact'
-import Products from '../pages/Products'
-import { DataContext } from './context/UserContext'
+// import React, { useContext } from 'react'
+// import Contact from '../pages/Contact'
+// import Products from '../pages/Products'
+// import { DataContext } from './context/UserContext'
+// const App = () => {
+//   const data = useContext(DataContext)
+//   return (
+//     <div className='bg-black text-white h-[100vh]'>
+      
+//       App {data}
+      
+//       <Contact/>
+//       <Products/>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React, { useState } from 'react'
+
 const App = () => {
-  const data = useContext(DataContext)
+  
+  const [counter, setCounter] = useState(0)
+
+
   return (
-    <div className='bg-black text-white h-[100vh]'>
+    <div className='bg-black text-white h-[100vh] w-full'>
       
-      App {data}
-      
-      <Contact/>
-      <Products/>
-      
+      <div className='p-4'>
+        <button
+         onClick={()=>{
+          setCounter(prev=>(prev+1))
+         }}
+         className='p-1 cursor-pointer border border-white active:scale-90'>
+            Increase: {counter}
+        </button>
+      </div>
     </div>
+    
   )
 }
 
