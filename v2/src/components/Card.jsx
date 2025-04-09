@@ -3,6 +3,7 @@
 // https://ghibliapi.vercel.app/films
 import React from 'react'
 import axios from 'axios'
+import Buttoner from './Buttoner'
 
 const Card = () => {
 
@@ -18,7 +19,10 @@ const Card = () => {
             <h3>Title</h3>
 
             <h4>Description</h4>
-
+            
+            
+            
+            <Buttoner/>
         
         </div>
 
