@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import Home from './components/Home'
 import Card from './components/Card'
+import { DataContext } from './context/MovieContext'
+
 
 const App = () => {
 
-  
- 
+  const data=useContext(DataContext)
+  console.log(data)
+
   
   return (
     <>
@@ -14,6 +17,7 @@ const App = () => {
       
       <Card/>
       
+     
       
       
     </div>

@@ -1,13 +1,19 @@
 
 // https://openlibrary.org/search.json?q=the+lord+of+the+rings
 // https://ghibliapi.vercel.app/films
-import React from 'react'
+import React, { useContext } from 'react'
+import Button from './Button'
+import { DataContext } from '../context/MovieContext'
 
 
 
 const Card = () => {
 
-    
+  
+  
+    const {movie,fetchdata}=useContext(DataContext)
+    console.log(movie)
+
 
     
   return (
@@ -19,6 +25,10 @@ const Card = () => {
             <h3>Title</h3>
 
             <h4>Description</h4>
+
+            <Button 
+            
+            value={'Enter'} />
             
             
             

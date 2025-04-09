@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../context/MovieContext'
 
 const Button = ({value}) => {
   
+    
+    
+      const {movie,fetchdata}=useContext(DataContext)
+      
+      const readdata=()=>{
+        console.log(fetchdata)
+      }
 
 
     return (
@@ -10,7 +18,11 @@ const Button = ({value}) => {
 
         
         
-        <button className='border p-1 cursor-pointer active:scale-90 border-amber-700 bg-green-700'>
+        <button
+            onClick={readdata} 
+            
+        
+        className='border p-1 cursor-pointer active:scale-90 border-amber-700 bg-green-700'>
             {value}
         </button>
 
