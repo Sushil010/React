@@ -8,7 +8,7 @@ const MovieContext = ({children}) => {
     const [data, setData] = useState([])
 
     const fetcher=async()=>{
-        value= await axios.get('https://ghibliapi.vercel.app/films')
+        const value= await axios.get('https://ghibliapi.vercel.app/films')
         setData(value.data)
     }
 

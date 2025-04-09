@@ -5,10 +5,12 @@ const Button = ({value}) => {
   
     
     
-      const {movie,fetchdata}=useContext(DataContext)
+      const {data,fetcher}=useContext(DataContext)
       
       const readdata=()=>{
-        console.log(fetchdata)
+        fetcher()
+        console.log(data.title)
+        
       }
 
 

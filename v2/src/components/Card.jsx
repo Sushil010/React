@@ -11,8 +11,8 @@ const Card = () => {
 
   
   
-    const {movie,fetchdata}=useContext(DataContext)
-    console.log(movie)
+    const {data,fetcher}=useContext(DataContext)
+    // console.log(data)
 
 
     
