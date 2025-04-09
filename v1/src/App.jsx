@@ -558,43 +558,55 @@
 // export default App
 
 
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 
-const App = () => {
+// const App = () => {
   
-  const [counter, setCounter] = useState(0)
+//   const [counter, setCounter] = useState(0)
   
-  useEffect(() => {
-    if (counter>5){
-      <div className='bg-yellow-600 text-2xl text-black'>
-        Counter init
-      </div>
-    }
+//   useEffect(() => {
+//     if (counter>5){
+//       <div className='bg-yellow-600 text-2xl text-black'>
+//         Counter init
+//       </div>
+//     }
     
 
-  }, [counter])
+//   }, [counter])
   
 
 
-  return (
-    <div className='bg-black text-white h-[100vh] w-full'>
+//   return (
+//     <div className='bg-black text-white h-[100vh] w-full'>
       
-      <div className='p-4'>
-        <button
-         onClick={()=>{
-          setCounter(prev=>(prev+1))
-         }}
-         className='p-1 cursor-pointer border border-white active:scale-90'>
-            Increase: {counter}
-        </button>
-      </div>
+//       <div className='p-4'>
+//         <button
+//          onClick={()=>{
+//           setCounter(prev=>(prev+1))
+//          }}
+//          className='p-1 cursor-pointer border border-white active:scale-90'>
+//             Increase: {counter}
+//         </button>
+//       </div>
 
          
 
 
-    </div>
+//     </div>
 
 
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>App</div>
   )
 }
 
