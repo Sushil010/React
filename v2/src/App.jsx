@@ -5,12 +5,7 @@ import Card from './components/Card'
 const App = () => {
 
   
-  const info= async()=>{
-  
-    var datas= await axios.get('https://ghibliapi.vercel.app/films')
-    console.log(datas)
-    
-  }
+ 
   
   return (
     <>

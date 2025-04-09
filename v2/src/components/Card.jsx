@@ -2,7 +2,7 @@
 // https://openlibrary.org/search.json?q=the+lord+of+the+rings
 // https://ghibliapi.vercel.app/films
 import React from 'react'
-import axios from 'axios'
+
 import Buttoner from './Buttoner'
 
 const Card = () => {
@@ -23,6 +23,8 @@ const Card = () => {
             
             
             <Buttoner/>
+
+
         
         </div>
 
