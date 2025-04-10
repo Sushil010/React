@@ -12,31 +12,41 @@ const Card = () => {
   
   
     const {data,fetcher}=useContext(DataContext)
-    // console.log(data)
+    
 
 
     
   return (
     
     <>
-
-        <div className='bg-gray-600 text-black w-[20vw] h-[30vh] text-center border-amber-400 rounded-2xl'>
-        
-            <h3>Title</h3>
-
-            <h4>Description</h4>
-
-            <Button 
+      <Button 
             
             value={'Enter'} />
             
+
+        {/* <div className='bg-gray-600 p-4 text-black w-[20vw]
+         h-[30vh] text-center border-amber-400 rounded-2xl'> */}
+        
+            {data.map(function(item,index){
+              return <div key={index} className='bg-gray-600 grid grid-cols-3 p-4 text-black w-[20vw]
+                    h-[30vh] text-center border-amber-400 rounded-2xl'>
+                      
+                      <h3>{item.title}</h3>
+
+                </div>
+            })}
+            {/* <h3>Title</h3>
+
+            <h4>Description</h4> */}
+
+            
             
             
             
 
 
         
-        </div>
+        {/* </div> */}
 
 
 

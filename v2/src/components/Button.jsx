@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { DataContext } from '../context/MovieContext'
 
 const Button = ({value}) => {
@@ -9,9 +9,18 @@ const Button = ({value}) => {
       
       const readdata=()=>{
         fetcher()
-        console.log(data.title)
+        // console.log(data.map((item=>item.title)))
         
       }
+      useEffect(() => {
+        
+        if(data.length>0){
+          console.log(data.map(item=>item.title))
+        }
+      
+        
+      }, [data])
+      
 
 
     return (
