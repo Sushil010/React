@@ -15,7 +15,7 @@ const Button = ({value}) => {
       useEffect(() => {
         
         if(data.length>0){
-          console.log(data.map(item=>item.title))
+          console.log(data.map(item=>item.image))
         }
       
         

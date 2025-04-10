@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
     
-    <div className='text-white p-3 bg-black w-full h-[100vh]'>
+    <div className='text-white p-3 bg-black w-full h-full'>
       
       <Card/>
       
