@@ -1,19 +1,29 @@
 
 // https://openlibrary.org/search.json?q=the+lord+of+the+rings
 // https://ghibliapi.vercel.app/films
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Button from './Button'
 import { DataContext } from '../context/MovieContext'
 
 
 
 const Card = () => {
+  const {data,fetcher}=useContext(DataContext)
 
-
-  const [counters, setCounters] = useState()
+  const [counters, setCounters] = useState(7)
   
   
-    const {data,fetcher}=useContext(DataContext)
+  
+  useEffect(() => {
+    if(data.length===0){
+      fetcher()
+    }
+  
+  }, [data,fetcher])
+  
+  
+  
+    
     
     const informer=()=>{
       setCounters(prev=>prev+7)
@@ -31,8 +41,9 @@ const Card = () => {
 
         {/* <div className='bg-gray-600 p-4 text-black w-[20vw]
          h-[30vh] text-center border-amber-400 rounded-2xl'> */}
-        <div className='grid grid-cols-3'>
-            {data.map(function(item,index){
+          
+          <div className='grid grid-cols-3'>
+            {data.slice(0,counters).map(function(item,index){
               return <div key={index} className='bg-gray-600 m-8 p-4 text-black 
                      text-center border-amber-400 rounded-2xl'>
                       {/*           <img className='h-[150px] w-[150px] rounded-2xl' src={item.download_url} alt="" /> */}
@@ -53,7 +64,13 @@ const Card = () => {
             <h4>Description</h4> */}
 
             
-            
+          {counters<data.length &&(
+              <div className='flex justify-center align-center'>
+                <button onClick={informer} className='bg-green-700 text-red-700'>
+                      Load More
+                </button>
+              </div>
+          )}
             
             
 
