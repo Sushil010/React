@@ -16,7 +16,8 @@ const App = () => {
     
   try {
     setLoader(true)
-    const datas=await axios.get("https://api.nasa.gov/planetary/apod?api_key=BgD9eI0wcHkqJK6UU0epgYUYzMamRC7MiWrPTl6E")
+    // const datas=await axios.get("https://api.nasa.gov/planetary/apod?api_key=BgD9eI0wcHkqJK6UU0epgYUYzMamRC7MiWrPTl6E")
+    const datas=await axios.get("https://api.nasa.gov/planetary/apod?api_key=BgD9eI0wcHkqJK6UU0epgYUYzMamRC7MiWrPTl6E&start_date=2017-07-08&end_date=2017-07-10")
     setData(datas.data)
     console.log(datas)
       }
@@ -46,7 +47,7 @@ const App = () => {
         })} */}
 
 
-        {loader?
+        {/* {loader?
         (<div className='flex justify-center items-center'>
           <CircularProgress color="success"/>
         </div>)
@@ -55,10 +56,39 @@ const App = () => {
         <>
         <h1 className='text-blue-800'>{data.title}</h1>
         <img src={data.url} alt="" style={{maxWidth:"50%"}}/>
-        {/* <h1>{data.explanation}</h1> */}
+       
         </>
-        
+        } */}
+
+
+
+        {loader?
+        (<div className='flex justify-center items-center'>
+          <CircularProgress color="success"/>
+        </div>)
+        :
+          <>
+          
+         { data.map(function(value){
+            return(
+                    <>
+                    <h2 className='flex justify-left py-7 items-center text-2xl text-blue-800'>{value.title}</h2>
+                   <img src={value.hdurl} alt="" style={{width:"50%"}} />
+                    </>
+                    
+
+                ) 
+            
+          })
         }
+          
+          </>
+
+        }
+        
+
+
+        
       </div>
       
 
