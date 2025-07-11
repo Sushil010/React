@@ -3,12 +3,15 @@ import React from 'react'
 const App = () => {
   return (
     <>
-    <div className='h-screen bg-red-500'>
-      App
+    <div className='bg-[#242424] h-screen w-screen text-white'>
+
+      <div>
+        App
+      </div>
+
     </div>
     
     </>
-    
   )
 }
 
