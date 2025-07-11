@@ -27,7 +27,7 @@ const App = () => {
     
     <>
     
-    <div className='h-screen bg-[#242424] w-screen text-white p-3 gap-2 flex'>  
+    <div className='h-screen bg-[#242424] w-screen text-white p-3 gap-2'>  
       
       <div className=''>
         <input
