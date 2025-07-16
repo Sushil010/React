@@ -49,13 +49,18 @@ const App = () => {
         <button
           // onClick={()=>{console.log("Delete Clicked")}}
           onClick={Handler}
-          className='bg-blue-200 cursor-pointer p-2 border border-black rounded rounded-20px'>
+          className='bg-blue-200 cursor-pointer p-2 mt-2 border border-black rounded rounded-20px'>
           Delete
         </button>
       </div>
       {handleinput.map((value,index)=>(
-        <div key={index}>
+        <div className='flex gap-1.5 mt-2' key={index}>
           {value}
+          <div>
+            <button className='border border-amber-500 p-1 bg-green-400 cursor-pointer'>
+              Edit
+            </button>
+            </div>
         </div>  
         
       
